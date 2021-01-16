@@ -24,7 +24,7 @@ nav .brand-logo {
   position: absolute;
   left: 50%;
   top: 12%;
-  padding-top: 5%;
+  padding-top: 4%;
   border-left: transparent;
   font-size: 12px;
 }
@@ -33,7 +33,7 @@ nav .brand-logo {
   cursor: pointer;
   padding: 6px;
   margin: 4px 4px;
-  width: 70px;
+  width: 50px;
 }
 
 #loader {
@@ -60,7 +60,7 @@ blockquote.bubble {
 blockquote.speech {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/speech-bubble.svg);
   width: 30%;
-  padding-bottom: 16%;
+  padding-bottom: 13%;
 }
 
 #no-response {
@@ -73,4 +73,18 @@ blockquote.speech {
 #no-response > img {
   width: 100%;
   height: 100%;
+}
+
+.action-buttons {
+  margin-top: 6px;
+}
+
+#no {
+  background-color: #e13c3c;
+  color: white;
+}
+
+#yes {
+  background-color: #33bc8e;
+  color: white;
 }
