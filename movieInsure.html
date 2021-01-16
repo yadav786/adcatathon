@@ -13,15 +13,21 @@
 <body>
   <div include-html="header.html"></div>
   <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
+    <div class="container media-elements">
+      <div id="no-response">
+        <img id="img-response" src="" />
+      </div>
         <video width="100%" height="100%" controls>
             <source src="assets/KGFChapter2.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <audio controls>
-            <source src="assets/MayIcomeInKgftone.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-          </audio>
+          <blockquote class="speech bubble" id="notify-insurance">
+              <div id="notify-query">Would you like to buy Health Insurance? </div>
+              <div>
+                <button onclick="noToInsurance()">No</button>
+                <button onclick="redirectToInsurance()">Yes</button>
+              </div>
+          </blockquote>
     </div>
   </div>
 

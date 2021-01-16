@@ -35,3 +35,19 @@ function includeHTML() {
 };
 
 includeHTML();
+
+function myInsuranceFunction() {
+  document.getElementById('no-response').style.zIndex= -1;
+  document.getElementById('img-response').src = '';
+}
+
+function noToInsurance() {
+    document.getElementById('img-response').src = '../assets/oOOOWhat.gif';  
+    document.getElementById('no-response').style.zIndex = 1;
+    setTimeout(myInsuranceFunction, 1600);
+}
+
+function redirectToInsurance() {
+    window.location.href='./buyInsurance.html';
+}
+

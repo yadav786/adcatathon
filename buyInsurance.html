@@ -11,13 +11,18 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+  <audio id="myInsuranceAudio">
+    <source src="assets/MayIcomeInKgftone.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+  <div id="loader">
+  </div>
   <div include-html="header.html"></div>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      May I Come In?
+      
     </div>
   </div>
-
 
   <div class="container">
     <div class="section">
@@ -97,6 +102,18 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-
+  <script>
+$(document).ready(function() {
+    $('#loader').click();
+    var audio = new Audio('assets/MayIcomeInKgftone.mp3');
+    audio.play();
+    function myFunction() {
+        audio.pause();
+        document.getElementById('loader').style.position="static";
+    }
+      
+    setTimeout(myFunction, 2000);
+});
+  </script>
   </body>
 </html>

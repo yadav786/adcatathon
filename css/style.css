@@ -15,3 +15,62 @@
 nav .brand-logo {
   padding: 8px;
 }
+
+.media-elements {
+  position: relative;
+}
+
+#notify-insurance {
+  position: absolute;
+  left: 50%;
+  top: 12%;
+  padding-top: 5%;
+  border-left: transparent;
+  font-size: 12px;
+}
+
+#notify-insurance button {
+  cursor: pointer;
+  padding: 6px;
+  margin: 4px 4px;
+  width: 70px;
+}
+
+#loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../assets/mayIComein.gif') 50% 50% no-repeat rgb(249, 249, 249);
+  background-color: black;
+}
+
+blockquote.bubble { 
+	background-position: center;
+  background-repeat: no-repeat !important;
+	background-size: 100% 100%;
+  margin: 0 auto;
+	text-align: center;
+	height: 0;
+	box-sizing: content-box;
+	line-height: 1;
+}
+blockquote.speech {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/speech-bubble.svg);
+  width: 30%;
+  padding-bottom: 16%;
+}
+
+#no-response {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+#no-response > img {
+  width: 100%;
+  height: 100%;
+}
