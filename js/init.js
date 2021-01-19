@@ -48,6 +48,61 @@ function noToInsurance() {
 }
 
 function redirectToInsurance() {
-    window.location.href='./buyInsurance.html';
+    window.location.href='./buyInsurance.html?insurance='+$("#getInsurance").text();
 }
 
+var vid = document.getElementById("myVideo");
+
+if(parseInt(vid.currentTime)===0) {
+  $("#notify-insurance").css({display: 'none'});
+}
+
+vid.ontimeupdate = function() {getVideoUpdate()};
+function getVideoUpdate() {
+  if(parseInt(vid.currentTime) >= 16 && parseInt(vid.currentTime) < 23){
+    $('#getInsurance').text('Life Term');
+    $("#notify-insurance").css({display: 'block'});
+  }
+  else if(parseInt(vid.currentTime) >= 23 && parseInt(vid.currentTime) < 28){
+    $('#getInsurance').text('Accidental');
+    $("#notify-insurance").css({display: 'block'});
+  }
+
+  else if(parseInt(vid.currentTime) >= 28 && parseInt(vid.currentTime) < 33){
+    $('#getInsurance').text('Property');
+    $("#notify-insurance").css({display: 'block'});
+  }
+
+  else if(parseInt(vid.currentTime) >= 33 && parseInt(vid.currentTime) < 40){
+    $('#getInsurance').text('Travel');
+    $("#notify-insurance").css({display: 'block'});
+  }
+  else if(parseInt(vid.currentTime) >= 53 && parseInt(vid.currentTime) < 61){
+    $('#getInsurance').text('Vehicle');
+    $("#notify-insurance").css({display: 'block'});
+  }
+
+  else if(parseInt(vid.currentTime) >= 62 && parseInt(vid.currentTime) < 70){
+    $('#getInsurance').text('Fire');
+    $("#notify-insurance").css({display: 'block'});
+  }
+
+  else if(parseInt(vid.currentTime) >= 90 && parseInt(vid.currentTime) < 100){
+    $('#getInsurance').text('Motor');
+    $("#notify-insurance").css({display: 'block'});
+  }
+
+  else if(parseInt(vid.currentTime) >= 103 && parseInt(vid.currentTime) < 111){
+    $('#getInsurance').text('Health');
+    $("#notify-insurance").css({display: 'block'});
+  }
+
+  else if(parseInt(vid.currentTime) >= 114 && parseInt(vid.currentTime) < 118){
+    $('#getInsurance').text('Personal');
+    $("#notify-insurance").css({display: 'block'});
+  }
+  else {
+    $("#notify-insurance").css({display: 'none'});
+  }
+
+}
