@@ -36,30 +36,51 @@
      </div>
 
      <div class="row">
-      <form class="col s12">
+      
         <div class="row">
           <div class="input-field col s6">
-            <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+            <input placeholder="Pankaj" id="first_name" type="text" class="validate">
             <label for="first_name">First Name</label>
           </div>
           <div class="input-field col s6">
-            <input id="last_name" type="text" class="validate">
+            <input placeholder="Yadav" id="last_name" type="text" class="validate">
             <label for="last_name">Last Name</label>
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s12">
+          <div class="input-field col s6">
             <input value="" id="disabled" type="number" class="validate">
             <label for="disabled">Mobile Number</label>
           </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
+          <div class="input-field col s6">
             <input id="email" type="email" class="validate">
             <label for="email">Email</label>
           </div>
         </div>
-      </form>
+        <div class="row">
+        <div class="input-field col s6">
+          <select>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">5 Lakhs</option>
+            <option value="2">10 Lakhs</option>
+            <option value="3">15 Lakhs</option>
+          </select>
+          <label>Sum Assured</label>
+        </div>
+        <div class=" input-field col s6 switch">
+          <label>
+            Are you an NRI?
+            <input type="checkbox">
+            <span class="lever"></span>
+          </label>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col s12">
+            <button class="btn waves-effect waves-light" type="submit" onclick="M.toast({html: 'User data saved successfully, our marketing representative will get in touch with you!'});" name="action">Submit
+          </div>
+        </div>
+      
     </div>
 
       <!--   Icon Section   -->
@@ -152,6 +173,10 @@ $(document).ready(function() {
       
     setTimeout(myFunction, 5000);
 });
+
+$(document).ready(function(){
+    $('select').formSelect();
+  });
   </script>
   </body>
 </html>
