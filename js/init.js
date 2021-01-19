@@ -36,12 +36,16 @@ function includeHTML() {
 
 includeHTML();
 
+var vid = document.getElementById("myVideo");
+
 function myInsuranceFunction() {
   document.getElementById('no-response').style.zIndex= -1;
   document.getElementById('img-response').src = '';
+  vid.play();
 }
 
 function noToInsurance() {
+    vid.pause();
     document.getElementById('img-response').src = '../assets/oOOOWhat.gif';  
     document.getElementById('no-response').style.zIndex = 1;
     setTimeout(myInsuranceFunction, 1600);
@@ -51,14 +55,13 @@ function redirectToInsurance() {
     window.location.href='./buyInsurance.html?insurance='+$("#getInsurance").text();
 }
 
-var vid = document.getElementById("myVideo");
-
 if(parseInt(vid.currentTime)===0) {
   $("#notify-insurance").css({display: 'none'});
 }
 
 vid.ontimeupdate = function() {getVideoUpdate()};
 function getVideoUpdate() {
+  // better to use switch here
   if(parseInt(vid.currentTime) >= 16 && parseInt(vid.currentTime) < 23){
     $('#getInsurance').text('Life Term');
     $("#notify-insurance").css({display: 'block'});
